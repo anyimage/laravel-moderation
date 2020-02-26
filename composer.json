@@ -1,0 +1,60 @@
+{
+    "name": "anyimage/laravel-moderation",
+    "description": "",
+    "keywords": [
+        "anyimage",
+        "laravel-moderation"
+    ],
+    "homepage": "https://github.com/anyimage/laravel-moderation",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vladislav Novik",
+            "email": "librevlad@gmail.com",
+            "homepage": "https://serpentine.io",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "exfriend/download": "^1.0",
+        "exfriend/uncurl": "^1.0",
+        "laravel/framework": "5.*",
+        "symfony/dom-crawler": "^4.2"
+    },
+    "require-dev": {
+        "larapack/dd": "^1.0",
+        "orchestra/testbench": "^3.8",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AnyImage\\Moderation\\": "src"
+        },
+        "classmap": [
+            "database"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AnyImage\\Moderation\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AnyImage\\Moderation\\ModerationServiceProvider"
+            ],
+            "aliases": {
+                "Moderation": "AnyImage\\Moderation\\ModerationFacade"
+            }
+        }
+    }
+}
