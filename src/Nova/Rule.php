@@ -48,6 +48,7 @@ class Rule extends Resource
             BelongsTo::make('Severity'),
             Text::make('Pattern'),
             Boolean::make('is_regex'),
+            BelongsToMany::make( 'Fields' ),
         ];
     }
 
