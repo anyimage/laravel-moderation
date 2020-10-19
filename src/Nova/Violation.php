@@ -5,6 +5,7 @@ namespace AnyImage\Moderation\Nova;
 use App\Nova\Resource;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
 
 class Violation extends Resource
 {
@@ -42,6 +43,7 @@ class Violation extends Resource
     {
         return [
             ID::make()->sortable(),
+            Text::make( 'Value' ),
         ];
     }
 
