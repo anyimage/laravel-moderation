@@ -3,6 +3,7 @@
 namespace AnyImage\Moderation\Nova;
 
 use AnyImage\Moderation\Nova\Actions\Approve;
+use AnyImage\Moderation\Nova\Actions\ApproveDomain;
 use App\Nova\Resource;
 use App\Nova\User;
 use Illuminate\Http\Request;
@@ -98,6 +99,7 @@ class WhitelistRequest extends Resource
     {
         return [
             new Approve(),
+            new ApproveDomain(),
         ];
     }
 }
