@@ -16,11 +16,11 @@
         }
     ],
     "require": {
-        "php": "^7.1|8.*",
+        "php": "^7.2|8.*",
         "exfriend/download": "^1.0",
         "exfriend/uncurl": "^1.0",
-        "laravel/framework": "5.*|9.*",
-        "symfony/dom-crawler": "^4.2"
+        "laravel/framework": "*",
+        "symfony/dom-crawler": "*"
     },
     "require-dev": {
         "larapack/dd": "^1.0",
